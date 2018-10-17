@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Knewave|Roboto:500,700');
 
+:root {
+    --color1: rgb(90, 207, 228);
+    --color2: rgb(190, 237, 255);
+    --color3: rgb(77, 195, 241);
+}
+
 html {
     line-height: 1;
     font-family: 'Roboto';
-    background-color: rgb(241, 241, 241);
-    text-shadow: 1px 1px rgba(0,0,0,0.1);
+    background-color: var(--color1);
+    text-shadow: 1px 1px rgba(0,0,0,0.2);
 }
 
 body {
@@ -21,11 +27,13 @@ body {
 
 h1 {
     font-family: 'Knewave';
-    font-size: 50px
+    font-size: 50px;
+    color: whitesmoke;
 }
 
 h2 {
     font-family: 'Knewave';
+    color: whitesmoke;
 }
 
 #store-form {
@@ -38,7 +46,7 @@ h2 {
     font-family: 'Roboto';
     font-size: 20px;
     border-radius: 5% 5% 0% 0% / 20% 20% 0% 0%;
-    background-color: rgb(190, 237, 255);
+    background-color: var(--color2);
     border: none;
     padding: 10px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
@@ -70,9 +78,9 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 600px;
-    background: white;
-    border-radius: 5% / 20%;
-    margin-bottom: 10px;
+    background: whitesmoke;
+    border-radius: 5% 5% 0% 0% / 20% 20% 5% 5%;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
 }
 
@@ -116,7 +124,7 @@ h3 {
 
 .submit-item {
     border: none;
-    background-color: rgb(77, 195, 241);
+    background-color: var(--color3);
     color: white;
     height: 35px;
     border-radius: 5% / 20%;
@@ -141,9 +149,9 @@ h3 {
     justify-content: space-between;
     align-items: center;
     width: 150px;
-    background-color: rgb(77, 195, 241);
+    background-color: var(--color3);
     color: white;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     border-radius: 5% / 20%;
     padding: 10px;
     margin: 10px;
@@ -152,7 +160,7 @@ h3 {
 
 .remove-item-button {
     color: rgb(240, 240, 240);
-    background-color: rgb(77, 195, 241);
+    background-color: var(--color3);
 }
 
 .remove-item-button:hover {
