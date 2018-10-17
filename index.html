@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Grocery List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div id="page-wrap">
+        <h1>Grocerty List</h1>
+        <form id="store-form">
+            <h2>Create a new shopping list for a store:</h2>
+            <input id="store-text-box" type="text" placeholder="Type store name" required/>
+            <input id="submit-store" type="submit" value="Enter"/>
+        </form>
+
+        <div id="store-lists">
+
+        </div>
+    </div>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-database.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-functions.js"></script> -->
+
+    <!-- Comment out (or don't include) services that you don't want to use -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-storage.js"></script> -->
+
+    <script>
+    var config = {
+        apiKey: "AIzaSyAO59G5JmyULZctm5p8oZWYiQaUnxG3Y-Q",
+        authDomain: "grocery-list-edc75.firebaseapp.com",
+        databaseURL: "https://grocery-list-edc75.firebaseio.com",
+        projectId: "grocery-list-edc75",
+        storageBucket: "grocery-list-edc75.appspot.com",
+        messagingSenderId: "859948397757"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="script.js"></script>
+    </body>
+</html>

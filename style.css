@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave|Roboto:500,700');
+
+html {
+    line-height: 1;
+    font-family: 'Roboto';
+    background-color: rgb(241, 241, 241);
+    text-shadow: 1px 1px rgba(0,0,0,0.1);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#page-wrap {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Knewave';
+    font-size: 50px
+}
+
+h2 {
+    font-family: 'Knewave';
+}
+
+#store-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#store-text-box {
+    font-family: 'Roboto';
+    font-size: 20px;
+    border-radius: 5% 5% 0% 0% / 20% 20% 0% 0%;
+    background-color: rgb(190, 237, 255);
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+#submit-store {
+    border: none;
+    width: 230px;
+    background-color: rgb(77, 195, 241);
+    color: white;
+    border-radius: 0% 0% 5% 5% / 0% 0% 20% 20%;
+    font-size: 25px;
+    margin-bottom: 50px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+#submit-store:hover {
+    cursor: pointer;
+}
+
+#store-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+}
+
+.store {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background: white;
+    border-radius: 5% / 20%;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+}
+
+.store-header { 
+    display: flex;
+    width: 600px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(191, 237, 255);
+    border-radius: 5% / 20%;
+}
+
+h3 {
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    font-family: 'Knewave';
+}
+
+.delete-store-button {
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 5% / 20%;
+    font-family: Roboto;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.delete-store-button:hover{
+    cursor: pointer;
+}
+
+.add-item-text-box {
+    font-family: 'Roboto';
+    font-size: 16px;
+    border-radius: 5% / 20%;
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.submit-item {
+    border: none;
+    background-color: rgb(77, 195, 241);
+    color: white;
+    height: 35px;
+    border-radius: 5% / 20%;
+    font-size: 16px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.submit-item:hover{
+    cursor: pointer;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    padding-bottom: 5px;
+    justify-content: flex-start;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    background-color: rgb(77, 195, 241);
+    color: white;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    border-radius: 5% / 20%;
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.remove-item-button {
+    color: rgb(240, 240, 240);
+    background-color: rgb(77, 195, 241);
+}
+
+.remove-item-button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    #page-wrap{
+        width: 100vw;
+    }
+    h2{
+        text-align: center;
+        width: 300px;
+    }
+    .store, .store-header,#store-lists,.items {
+        width: 95vw;
+    }
+    .add-item-text-box{
+        width: 80px;
+    }
+    .item {
+        width: 75px;
+    }
+    .delete-store-button{
+        width: 70px;
+    }
+}
