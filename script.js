@@ -87,8 +87,6 @@ function updateStores(){
     })
 }
 
-storeForm.addEventListener('submit',submitStore)
-
 function enterItem(e){
     e.preventDefault()
     this.focus()
@@ -109,3 +107,5 @@ function removeItem(){
     itemRef.remove()
         .then(result => console.log('Remove item successful.'))
 }
+
+storeForm.addEventListener('submit',submitStore)
