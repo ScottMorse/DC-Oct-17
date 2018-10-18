@@ -1,21 +1,17 @@
 const database = firebase.database()
 
-const dataStores = database.ref("masterList/stores")
-
-const storeForm = document.getElementById('store-form')
 const storeTextBox = document.getElementById('store-text-box')
 const submitStoreButton = document.getElementById('submit-store')
-
-const storeLists = document.getElementById('store-lists')
 
 let stores = []
 
 let s = 0
+
 function configureObservers(){
     dataStores.on('value', snapshot => {
         stores = []
         if(s != 0){
-            console.log('Value changed to stores.')
+            console.log('Value changed to user\'s stores.')
         }
         snapshot.forEach(childStore => {
             const storeObj = childStore.val()
@@ -26,7 +22,6 @@ function configureObservers(){
         s++
     })
 }
-configureObservers()
 
 function submitStore(e){
     e.preventDefault()
@@ -93,7 +88,7 @@ function enterItem(e){
     const text = this.children[0].value
     let storeId = this.parentElement.parentElement.id
     storeId = storeId.slice(1,storeId.length)
-    const dataStoreRef = database.ref('masterList/stores/' + storeId + '/items')
+    const dataStoreRef = database.ref('users/' + currentUserId + '/stores/' + storeId + '/items')
     const newItemRef = dataStoreRef.push()
     newItemRef.set({name: text,key: newItemRef.key})
 }

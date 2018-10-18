@@ -10,7 +10,31 @@
     </head>
     <body>
     <div id="page-wrap">
+        <form id="reg-form" class="auth-form">
+            <div id="outside1" class="form-bckg"></div>
+            <div class="input-wrap">
+                <h3>Register</h3>
+                <input id="regEmailTextBox" class="email-form text-form" type="email" placeholder="example@email.com" name="newEmail" required/>
+                <input id="regPasswordTextBox" class="password-form text-form" type="password" placeholder="*********" name="newPassword" required/>
+                <input class="submit-form" id="submit-reg" type="submit" value="Sign Up" name="submitReg"/>
+                <div class="error" id="reg-error"></div>
+            </div>
+        </form>
+        <form id="login-form" class="auth-form">
+            <div id="outside2" class="form-bckg"></div>
+            <div class="input-wrap">
+                <h3>Login</h3>
+                <input id="loginEmailTextBox" class="email-form text-form" type="email" placeholder="example@email.com" name="userEmail" required/>
+                <input id="loginPasswordTextBox" class="password-form text-form" type="password" placeholder="*********" name="userPassword" required/>
+                <input class="submit-form" id="submit-login" type="submit" value="Login" name="submitLogin"/>
+                <div class="error" id="login-error"></div>
+            </div>
+        </form>
         <h1>Grocery List</h1>
+        <div id="user-area">
+            <div id="register">Register</div>
+            <div id="login">Login</div>
+        </div>
         <form id="store-form">
             <h2>Create a new shopping list for a store:</h2>
             <input id="store-text-box" type="text" placeholder="Type store name" required/>
@@ -46,6 +70,7 @@
     };
     firebase.initializeApp(config);
     </script>
+    <script src="registration.js"></script>
     <script src="script.js"></script>
     </body>
 </html>

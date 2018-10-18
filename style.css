@@ -15,6 +15,7 @@ html {
 
 body {
     display: flex;
+    margin: 0;
     justify-content: center;
 }
 
@@ -23,6 +24,92 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#user-area{
+    display: flex;
+    color: whitesmoke;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#register:hover{
+    cursor: pointer;
+}
+
+#login{
+    margin-left: 30px;
+}
+
+#login:hover{
+    cursor: pointer;
+}
+
+.error{
+    color: red;
+    margin-top: 20px;
+    position: absolute;
+    width: 300px;
+    transform: translateY(-50px);
+    text-align: center;
+}
+
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.form-bckg{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.input-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+    border: 10px solid rgb(205, 205, 252);
+    background-color: white;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+}
+
+.text-form{
+    width: 175px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.submit-form{
+    width: 180px;
+    background-color: var(--color2);
+    height: 30px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.submit-form:hover{
+    cursor: pointer;
+}
+
+#login-form{
+    display: none;
 }
 
 h1 {
@@ -40,6 +127,9 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.8s ease;
 }
 
 #store-text-box {
@@ -72,6 +162,9 @@ h2 {
     flex-direction: column;
     justify-content: center;
     width: 600px;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.8s ease;
 }
 
 .store {
